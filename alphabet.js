@@ -178,20 +178,22 @@ function I(h, symbol) {
 function J(h, symbol) {
   h = h || 7
   symbol = symbol || "J"
+  const w = Math.ceil(h * 1.2)
+  const wEven = w % 2 === 0 ? w : w - 1
   const ans = []
   for (let line = 1; line <= h; line++) {
     let text
     if (line === 1) {
-      text = "   JJJJJJJ"
+      text = `${space(wEven / 2)}${space(wEven / 2, symbol)}`
     }
-    else if (line === h) {
-      text = " JJJJJ    "
+    else if(line === h) {
+      text = `${space(1)}${space(wEven - 2, symbol)}${space(1)}`
     }
-    else if (line === h - 1 || line === h - 2) {
-      text = "J     J   "
+    else if(line > 0.6 * h) {
+      text = `J${space(wEven - 2)}J`
     }
     else {
-      text = "      J   "
+      text = `${space(wEven - 1)}${symbol}`
     }
     ans.push(text)
   }
