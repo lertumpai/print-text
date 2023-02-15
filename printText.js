@@ -16,6 +16,8 @@ class PrintText {
   }
 
   printAlphabet(char) {
+    console.log("Not Join:\n", this.alphabets[char.toUpperCase()])
+    console.log("Join:")
     console.log(this.alphabets[char.toUpperCase()].join("\n"))
   }
 

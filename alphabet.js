@@ -34,6 +34,16 @@ function init(h = 7, symbol) {
   alphabet["X"] = X(h, symbol)
   alphabet["Y"] = Y(h, symbol)
   alphabet["Z"] = Z(h, symbol)
+  alphabet["0"] = Zero(h, symbol)
+  alphabet["1"] = One(h, symbol)
+  alphabet["2"] = Two(h, symbol)
+  alphabet["3"] = Three(h, symbol)
+  alphabet["4"] = Four(h, symbol)
+  alphabet["5"] = Five(h, symbol)
+  alphabet["6"] = Six(h, symbol)
+  alphabet["7"] = Seven(h, symbol)
+  alphabet["8"] = Eight(h, symbol)
+  alphabet["9"] = Nine(h, symbol)
   return alphabet
 }
 
@@ -497,7 +507,212 @@ function Z(h, symbol) {
   const w = (h - 2) * 2
   for (let line = 1; line <= h; line++) {
     const calSpace = 2 * line - 4
-    const text = line === h || line === 1 ? `${space(w, symbol)}` : `${space(w - calSpace - 2)}${symbol}${symbol}${space(calSpace)}`
+    const text = line === h || line === 1 ? space(w, symbol) : `${space(w - calSpace - 2)}${symbol}${symbol}${space(calSpace)}`
+    ans.push(text)
+  }
+  return ans
+}
+
+function Zero(h, symbol) {
+  h = h || 7
+  symbol = symbol || "0"
+  const ans = []
+  const w = Math.ceil(h * 1.2)
+  for (let line = 1; line <= h; line++) {
+    const text = line === h || line === 1
+      ? space(w, symbol)
+      : `0${space(w - 2)}0`
+    ans.push(text)
+  }
+  return ans
+}
+
+function One(h, symbol) {
+  h = h || 7
+  symbol = symbol || "1"
+  const ans = []
+  const w = Math.ceil(h * 1.1)
+  const wOld = w % 2 === 1 ? w : w - 1
+  const halfWOld = (wOld - 1) / 2
+  const middle = Math.ceil(h / 2)
+  for (let line = 1; line <= h; line++) {
+    let text
+    if (line < middle) {
+      text = `${space(halfWOld - line)}${symbol}${space(line - 1)}${symbol}${space(halfWOld)}`
+    }
+    else if (line === h) {
+      text = `${space(wOld, symbol)}`
+    }
+    else {
+      text = `${space(halfWOld)}${symbol}${space(halfWOld)}`
+    }
+    ans.push(text)
+  }
+  return ans
+}
+
+function Two(h, symbol) {
+  h = h || 7
+  symbol = symbol || "2"
+  const ans = []
+  const w = (h - 2) * 2 - 1
+  for (let line = 1; line <= h; line++) {
+    let text
+    if (line === 1) {
+      text = `${space(1)}${space(w - 2, symbol)}${space(1)}`
+    }
+    else if (line === h) {
+      text = space(w, symbol)
+    }
+    else if (line === 2) {
+      const calSpace = w - (2 * line - 3)
+      text = `2${space(calSpace - 1)}${space(1, symbol)}${space(w - 1 - calSpace)}`
+    }
+    else {
+      const calSpace = w - (2 * line - 3)
+      text = `${space(calSpace)}${space(1, symbol)}${space(w - 1 - calSpace)}`
+    }
+    ans.push(text)
+  }
+  return ans
+}
+
+function Three(h, symbol) {
+  h = h || 7
+  symbol = symbol || "3"
+  const ans = []
+  const w = Math.ceil(h * 1.2)
+  const middle = Math.ceil(h / 2)
+  for (let line = 1; line <= h; line++) {
+    const text = line === 1 || line === h || line === middle
+      ? space(w, symbol)
+      : `${space(w - 1)}${symbol}`
+    ans.push(text)
+  }
+  return ans
+}
+
+function Four(h, symbol) {
+  h = h || 7
+  symbol = symbol || "4"
+  const ans = []
+  const w = Math.ceil(h * 1.2)
+  const middle = Math.ceil(h / 2)
+  for (let line = 1; line <= h; line++) {
+    let text
+    const calSpace = Math.floor(w * 0.7)
+    if (line < middle) {
+      text = `${symbol}${space(calSpace - 1)}${symbol}${space(w - calSpace - 1)}`
+    }
+    else if (line === middle) {
+      text = space(w, symbol)
+    }
+    else {
+      text = `${space(calSpace)}${symbol}${space(w - calSpace - 1)}`
+    }
+    ans.push(text)
+  }
+  return ans
+}
+
+function Five(h, symbol) {
+  h = h || 7
+  symbol = symbol || "5"
+  const ans = []
+  const w = Math.ceil(h * 1.3)
+  const middle = Math.ceil(h / 2)
+  for (let line = 1; line <= h; line++) {
+    let text
+    if (line === 1 || line === middle || line === h) {
+      text = space(w, symbol)
+    }
+    else if(line < middle) {
+      text = `${symbol}${space(w - 1)}`
+    }
+    else {
+      text = `${space(w - 1)}${symbol}`
+    }
+    ans.push(text)
+  }
+  return ans
+}
+
+function Six(h, symbol) {
+  h = h || 7
+  symbol = symbol || "6"
+  const ans = []
+  const w = Math.ceil(h * 1.2)
+  const middle = Math.ceil(h / 2)
+  for (let line = 1; line <= h; line++) {
+    let text
+    if (line === 1 || line === middle || line === h) {
+      text = space(w, symbol)
+    }
+    else if (line < middle) {
+      text = `${symbol}${space(w - 1)}`
+    }
+    else {
+      text = `${symbol}${space(w - 2)}${symbol}`
+    }
+    ans.push(text)
+  }
+  return ans
+}
+
+function Seven(h, symbol) {
+  h = h || 7
+  symbol = symbol || "7"
+  const ans = []
+  const w = Math.ceil(h * 1.2)
+  const middle = Math.ceil(h / 2)
+  for (let line = 1; line <= h; line++) {
+    let text
+    if (line === 1) {
+      text = space(w, symbol)
+    }
+    else if (line < 0.45 * h) {
+      text = `${symbol}${space(w - 2)}${symbol}`
+    }
+    else {
+      text = `${space(w - 1)}${symbol}`
+    }
+    ans.push(text)
+  }
+  return ans
+}
+
+function Eight(h, symbol) {
+  h = h || 7
+  symbol = symbol || "8"
+  const ans = []
+  const w = Math.ceil(h * 1.2)
+  const middle = Math.ceil(h / 2)
+  for (let line = 1; line <= h; line++) {
+    const text = line === 1 || line === middle || line === h
+      ? space(w, symbol)
+      : `8${space(w - 2)}8`
+    ans.push(text)
+  }
+  return ans
+}
+
+function Nine(h, symbol) {
+  h = h || 7
+  symbol = symbol || "9"
+  const ans = []
+  const w = Math.ceil(h * 1.2)
+  const middle = Math.ceil(h / 2)
+  for (let line = 1; line <= h; line++) {
+    let text
+    if (line === 1 || line === middle || line === h) {
+      text = space(w, symbol)
+    }
+    else if (line < middle) {
+      text = `${symbol}${space(w - 2)}${symbol}`
+    }
+    else {
+      text = `${space(w - 1)}${symbol}`
+    }
     ans.push(text)
   }
   return ans
