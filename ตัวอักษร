@@ -1,0 +1,214 @@
+n = 7 (OLD)
+
+AAAAAAAAAA
+A        A
+A        A
+AAAAAAAAAA
+A        A
+A        A
+A        A
+
+BBBBBBBBBB
+B         B
+B         B
+BBBBBBBBBB
+B         B
+B         B
+BBBBBBBBBB
+
+CCCCCCCCCCC
+C
+C
+C
+C
+C
+CCCCCCCCCCC
+
+DDDDDDDD
+D       D
+D        D
+D        D
+D        D
+D       D
+DDDDDDDD
+
+EEEEEEEEEEE
+E
+E
+EEEEEEEEEEE
+E
+E
+EEEEEEEEEEE
+
+FFFFFFFFFFF
+F
+F
+FFFFFFFFFFF
+F
+F
+F
+
+ GGGGGGGGGG
+G          G
+G
+G     GGGGGG
+G          G
+G          G
+ GGGGGGGGGG
+
+H          H
+H          H
+H          H
+HHHHHHHHHHHH
+H          H
+H          H
+H          H
+
+IIIIIIIIIII
+     I
+     I
+     I
+     I
+     I
+IIIIIIIIIII
+
+    JJJJJ
+      J
+      J
+      J
+J     J
+J     J
+ JJJJJ
+
+K       K
+K      K
+K     K
+KKKKKK
+K     K
+K      K
+K       K
+
+L
+L
+L
+L
+L
+L
+LLLLLLLL
+
+M           M
+MM         MM
+M M       M M
+M  M     M  M
+M   M   M   M
+M    M M    M
+M     M     M
+
+NN      N
+N N     N
+N  N    N
+N   N   N
+N    N  N
+N     N N
+N      NN
+
+OOOOOOOO
+O      O
+O      O
+O      O
+O      O
+O      O
+OOOOOOOO
+
+PPPPPPPPPPP
+P          P
+P          P
+PPPPPPPPPPP
+P
+P
+P
+
+QQQQQQQQQQQQ
+Q          Q
+Q          Q
+Q          Q
+Q       Q  Q
+Q        Q
+QQQQQQQQ  Q
+
+
+RRRRRRRRR
+R        R
+R        R
+RRRRRRRRR
+R     R
+R      R
+R       R
+
+SSSSSSSSSSS
+S
+S
+SSSSSSSSSSS
+          S
+          S
+SSSSSSSSSSS
+
+TTTTTTTTTTT
+     T
+     T
+     T
+     T
+     T
+     T
+
+U          U
+U          U
+U          U
+U          U
+U          U
+U          U
+ UUUUUUUUUU
+
+V           V
+ V         V
+  V       V
+   V     V
+    V   V
+     V V
+      V
+
+
+
+W    W    W
+W    W    W
+W    W    W
+W    W    W
+W    W    W
+W    W    W
+WWWWWWWWWWW
+
+
+X      X
+ X    X
+  X  X
+   XX
+  X  X
+ X    X
+X      X
+
+
+Y         Y
+Y         Y
+Y         Y
+YYYYYYYYYYY
+     Y
+     Y
+     Y
+
+ZZZZZZZZZZ
+        ZZ
+      ZZ
+    ZZ
+  ZZ
+ZZ
+ZZZZZZZZZZ
