@@ -9,7 +9,6 @@ class PrintText {
   }
 
   printAlphabets() {
-    console.log(this.alphabets)
     Object.values(this.alphabets).forEach(alphabet => {
       console.log(alphabet.join("\n"))
       console.log()

@@ -13,7 +13,7 @@ class CMD {
   }
 
   getH() {
-    return Number(this.command[this.H])
+    return Number(this.command[this.H]) || undefined
   }
 
   getSpeed() {
@@ -21,7 +21,7 @@ class CMD {
   }
 
   getSymbol() {
-    return Number(this.command[this.SYMBOL])
+    return this.command[this.SYMBOL]
   }
 
   getCommand() {

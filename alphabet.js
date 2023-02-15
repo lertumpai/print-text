@@ -2,8 +2,7 @@ function space(n = 0, str = " ") {
   return str.repeat(n)
 }
 
-function init(h = 7, symbol = "") {
-  if (isNaN(symbol)) symbol = ""
+function init(h = 7, symbol) {
   if (h % 2 === 0) throw Error("h must be old number")
   const alphabet = {}
   alphabet["A"] = A(h, symbol)
@@ -35,7 +34,8 @@ function init(h = 7, symbol = "") {
   return alphabet
 }
 
-function A(h = 7, symbol = "A") {
+function A(h = 7, symbol) {
+  symbol = symbol || "A"
   const ans = []
   const w = Math.ceil(h * 1.25)
   const middle = Math.ceil(h / 2)
@@ -46,7 +46,8 @@ function A(h = 7, symbol = "A") {
   return ans
 }
 
-function B(h = 7, symbol = "B") {
+function B(h = 7, symbol) {
+  symbol = symbol || "B"
   const ans = []
   const w = Math.ceil(h * 1.3)
   const middle = Math.ceil(h / 2)
@@ -57,7 +58,8 @@ function B(h = 7, symbol = "B") {
   return ans
 }
 
-function C(h = 7, symbol = "C") {
+function C(h = 7, symbol) {
+  symbol = symbol || "C"
   const ans = []
   const w = Math.ceil(h * 1.3)
   for (let line = 1; line <= h; line++) {
@@ -67,7 +69,8 @@ function C(h = 7, symbol = "C") {
   return ans
 }
 
-function D(h = 7, symbol = "D") {
+function D(h = 7, symbol) {
+  symbol = symbol || "D"
   const ans = []
   const w = Math.ceil(h * 1.3)
   for (let line = 1; line <= h; line++) {
@@ -86,7 +89,8 @@ function D(h = 7, symbol = "D") {
   return ans
 }
 
-function E(h = 7, symbol = "E") {
+function E(h = 7, symbol) {
+  symbol = symbol || "E"
   const ans = []
   const w = Math.ceil(h * 1.3)
   const middle = Math.ceil(h / 2)
@@ -97,7 +101,8 @@ function E(h = 7, symbol = "E") {
   return ans
 }
 
-function F(h = 7, symbol = "F") {
+function F(h = 7, symbol) {
+  symbol = symbol || "F"
   const ans = []
   const w = Math.ceil(h * 1.3)
   const middle = Math.ceil(h / 2)
@@ -108,7 +113,8 @@ function F(h = 7, symbol = "F") {
   return ans
 }
 
-function G(h = 7, symbol = "G") {
+function G(h = 7, symbol) {
+  symbol = symbol || "G"
   const ans = []
   const w = Math.ceil(h * 1.3)
   const middle = Math.ceil(h / 2)
@@ -135,7 +141,8 @@ function G(h = 7, symbol = "G") {
   return ans
 }
 
-function H(h = 7, symbol = "H") {
+function H(h = 7, symbol) {
+  symbol = symbol || "H"
   const ans = []
   const w = Math.ceil(h * 1.3)
   const middle = Math.ceil(h / 2)
@@ -147,6 +154,7 @@ function H(h = 7, symbol = "H") {
 }
 
 function I(h = 7, symbol = "I") {
+  symbol = symbol || "I"
   const ans = []
   const w = Math.ceil(h * 1.3)
   const wOld = w % 2 === 1 ? w : w - 1
@@ -158,7 +166,8 @@ function I(h = 7, symbol = "I") {
   return ans
 }
 
-function J(h = 7, symbol = "J") {
+function J(h = 7, symbol) {
+  symbol = symbol || "J"
   const ans = []
   for (let line = 1; line <= h; line++) {
     let text
@@ -180,6 +189,7 @@ function J(h = 7, symbol = "J") {
 }
 
 function K(h = 7, symbol = "K") {
+  symbol = symbol || "K"
   const ans = []
   const wMid = Math.ceil(h * 0.8)
   const w = wMid + Math.ceil(h / 2) - 1
@@ -201,6 +211,7 @@ function K(h = 7, symbol = "K") {
 }
 
 function L(h = 7, symbol = "L") {
+  symbol = symbol || "L"
   const ans = []
   const w = Math.ceil(h * 1.2)
   for (let line = 1; line <= h; line++) {
@@ -217,6 +228,7 @@ function L(h = 7, symbol = "L") {
 }
 
 function M(h = 7, symbol = "M") {
+  symbol = symbol || "M"
   const ans = []
   const w = h * 2 -1
   for (let line = 1; line <= h; line++) {
@@ -237,6 +249,7 @@ function M(h = 7, symbol = "M") {
 }
 
 function N(h = 7, symbol = "N") {
+  symbol = symbol || "N"
   const ans = []
   const w = h
   for (let line = 1; line <= h; line++) {
@@ -247,6 +260,7 @@ function N(h = 7, symbol = "N") {
 }
 
 function O(h = 7, symbol = "O") {
+  symbol = symbol || "O"
   const ans = []
   const w = Math.ceil(h * 1.3)
   for (let line = 1; line <= h; line++) {
@@ -257,6 +271,7 @@ function O(h = 7, symbol = "O") {
 }
 
 function P(h = 7, symbol = "P") {
+  symbol = symbol || "P"
   const ans = []
   const w = Math.ceil(h * 1.3)
   const middle = Math.ceil(h / 2)
@@ -277,6 +292,7 @@ function P(h = 7, symbol = "P") {
 }
 
 function Q(h = 7, symbol = "Q") {
+  symbol = symbol || "Q"
   const ans = []
   const w = Math.ceil(h * 1.5)
   for (let line = 1; line <= h; line++) {
@@ -302,6 +318,7 @@ function Q(h = 7, symbol = "Q") {
 }
 
 function R(h = 7, symbol = "R") {
+  symbol = symbol || "R"
   const ans = []
   const w = Math.ceil(h * 1.3)
   const middle = Math.ceil(h / 2)
@@ -323,6 +340,7 @@ function R(h = 7, symbol = "R") {
 }
 
 function S(h = 7, symbol = "S") {
+  symbol = symbol || "S"
   const ans = []
   const w = Math.ceil(h * 1.3)
   const middle = Math.ceil(h / 2)
@@ -343,6 +361,7 @@ function S(h = 7, symbol = "S") {
 }
 
 function T(h = 7, symbol = "T") {
+  symbol = symbol || "T"
   const ans = []
   const w = Math.ceil(h * 1.5)
   const wOld = w % 2 === 1 ? w : w - 1
@@ -355,6 +374,7 @@ function T(h = 7, symbol = "T") {
 }
 
 function U(h = 7, symbol = "U") {
+  symbol = symbol || "U"
   const ans = []
   const w = Math.ceil(h * 1.5)
   for (let line = 1; line <= h; line++) {
@@ -365,6 +385,7 @@ function U(h = 7, symbol = "U") {
 }
 
 function V(h = 7, symbol = "V") {
+  symbol = symbol || "V"
   const ans = []
   const w = h * 2 -1
   for (let line = 1; line <= h; line++) {
@@ -375,6 +396,7 @@ function V(h = 7, symbol = "V") {
 }
 
 function W(h = 7, symbol = "W") {
+  symbol = symbol || "W"
   const ans = []
   const w = Math.ceil(h * 1.5)
   const wOld = w % 2 === 1 ? w : w - 1
@@ -387,6 +409,7 @@ function W(h = 7, symbol = "W") {
 }
 
 function X(h = 7, symbol = "X") {
+  symbol = symbol || "X"
   const ans = []
   const w = h
   const middle = Math.ceil(h / 2)
@@ -407,6 +430,7 @@ function X(h = 7, symbol = "X") {
 }
 
 function Y(h = 7, symbol = "Y") {
+  symbol = symbol || "Y"
   const ans = []
   const middle = Math.ceil(h / 2)
   const w = Math.ceil(h * 1.5)
@@ -428,6 +452,7 @@ function Y(h = 7, symbol = "Y") {
 }
 
 function Z(h = 7, symbol = "Z") {
+  symbol = symbol || "Z"
   const ans = []
   const w = (h - 2) * 2
   for (let line = 1; line <= h; line++) {
