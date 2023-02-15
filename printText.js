@@ -15,6 +15,10 @@ class PrintText {
     })
   }
 
+  printAlphabet(char) {
+    console.log(this.alphabets[char.toUpperCase()].join("\n"))
+  }
+
   async print(text, speed) {
     const texts = text.toUpperCase().split("")
     for (let i = 0; i < this.h; i++) {

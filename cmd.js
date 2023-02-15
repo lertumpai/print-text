@@ -6,6 +6,7 @@ class CMD {
     this.SPEED = 'speed'
     this.SYMBOL = 'symbol'
     this.PRINT_ALPHABET = 'print'
+    this.CHAR = 'char'
   }
 
   getText() {
@@ -24,6 +25,10 @@ class CMD {
     return this.command[this.SYMBOL]
   }
 
+  getChar() {
+    return this.command[this.CHAR]
+  }
+
   getCommand() {
     this.command = process.argv
     .filter(val =>
@@ -32,6 +37,7 @@ class CMD {
       || val.startsWith("--" + this.SPEED)
       || val.startsWith("--" + this.SYMBOL)
       || val.startsWith("--" + this.PRINT_ALPHABET)
+      || val.startsWith("--" + this.CHAR)
     )
     .reduce((res, val) => {
       const [key, value] = val.replace("--", "").split("=")
@@ -60,7 +66,8 @@ class CMD {
 --${this.H} -> Height of character. ex. --${this.H}=7
 --${this.SPEED} -> typing velocity in milliseconds. ex. --${this.SPEED}=50
 --${this.SYMBOL} -> The symbol to print a name. ex. --${this.SYMBOL}=X
---${this.PRINT_ALPHABET} -> To print all of alphabet to see how it's look like. ex. --${this.PRINT_ALPHABET}=true`)
+--${this.PRINT_ALPHABET} -> To print all of alphabet to see how it's look like. ex. --${this.PRINT_ALPHABET}=true)
+--${this.CHAR} -> To print the specific alphabet. ex. --${this.CHAR}=A`)
   }
 }
 
