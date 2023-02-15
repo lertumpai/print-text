@@ -20,7 +20,7 @@ class PrintText {
   }
 
   async print(text, speed) {
-    const texts = text.toUpperCase().split("")
+    const texts = text.toUpperCase().split("").map(t => t === " " ? "SPACE" : t)
     for (let i = 0; i < this.h; i++) {
       const messages = texts.map(t => this.alphabets[t][i]).join(" ")
       for (let m of messages) {

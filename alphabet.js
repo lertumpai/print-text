@@ -1,3 +1,5 @@
+// TODO: implement 1-9 and spacebar
+
 function space(n = 0, str = " ") {
   return str.repeat(n)
 }
@@ -5,6 +7,7 @@ function space(n = 0, str = " ") {
 function init(h = 7, symbol) {
   if (h % 2 === 0) throw Error("h must be old number")
   const alphabet = {}
+  alphabet["SPACE"] = SPACE(h, symbol)
   alphabet["A"] = A(h, symbol)
   alphabet["B"] = B(h, symbol)
   alphabet["C"] = C(h, symbol)
@@ -32,6 +35,15 @@ function init(h = 7, symbol) {
   alphabet["Y"] = Y(h, symbol)
   alphabet["Z"] = Z(h, symbol)
   return alphabet
+}
+
+function SPACE(h) {
+  h = h || 7
+  const ans = []
+  for (let line = 1; line <= h; line++) {
+    ans.push(space(h * 0.6))
+  }
+  return ans
 }
 
 function A(h, symbol) {
@@ -80,10 +92,10 @@ function D(h, symbol) {
   for (let line = 1; line <= h; line++) {
     let text
     if (line === 1 || line === h) {
-      text = `${space(w - 1, symbol)}${space(1)}`
+      text = `${space(w - 1, symbol)}${space(2)}`
     }
     else if (line === 2 || line === h - 1) {
-      text = `${symbol}${space(w - 2)}${symbol}`
+      text = `${symbol}${space(w - 2)}${symbol}${space(1)}`
     }
     else {
       text = `${symbol}${space(w - 1)}${symbol}`
