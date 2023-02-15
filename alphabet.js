@@ -421,7 +421,7 @@ function U(h, symbol) {
   h = h || 7
   symbol = symbol || "U"
   const ans = []
-  const w = Math.ceil(h * 1.5)
+  const w = Math.ceil(h * 1.3)
   for (let line = 1; line <= h; line++) {
     const text = line === h ? `${space(1)}${space(w - 2, symbol)}${space(1)}` : `${symbol}${space(w - 2)}${symbol}`
     ans.push(text)
@@ -482,7 +482,7 @@ function Y(h, symbol) {
   symbol = symbol || "Y"
   const ans = []
   const middle = Math.ceil(h / 2)
-  const w = Math.ceil(h * 1.5)
+  const w = Math.ceil(h * 1.3)
   const wOld = w % 2 === 1 ? w : w - 1
   const halfWOld = (wOld - 1) / 2
   for (let line = 1; line <= h; line++) {
