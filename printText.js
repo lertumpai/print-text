@@ -21,13 +21,29 @@ class PrintText {
     console.log(this.alphabets[char.toUpperCase()].join("\n"))
   }
 
+  transformSpace(t) {
+    return t === " " ? "SPACE" : t
+  }
+
+  splitLine(text) {
+    return text.split("+")
+  }
+
+  splitMessage(message) {
+    return message.toUpperCase().split("").map(this.transformSpace)
+  }
+
   async print(text, speed) {
-    const texts = text.toUpperCase().split("").map(t => t === " " ? "SPACE" : t)
-    for (let i = 0; i < this.h; i++) {
-      const messages = texts.map(t => this.alphabets[t][i]).join(" ")
-      for (let m of messages) {
-        process.stdout.write(m)
-        await new Promise(res => setTimeout(res, speed))
+    const messages = this.splitLine(text)
+    for (const message of messages) {
+      const chars = this.splitMessage(message)
+      for (let i = 0; i < this.h; i++) {
+        const fullMessages = chars.map(char => this.alphabets[char][i]).join(" ")
+        for (let m of fullMessages) {
+          process.stdout.write(m)
+          await new Promise(res => setTimeout(res, speed))
+        }
+        console.log()
       }
       console.log()
     }
